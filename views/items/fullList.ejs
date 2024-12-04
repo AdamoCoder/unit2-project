@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Groceries Lists Index</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <div class="fullList-header-div">
+      <h1>Full Groceries List</h1>
+      <a class="add-item" href="/items/new">Add Item</a>
+    </div>
+    <ul>
+      <% items.forEach(item => { %>
+      <li>
+        <a class="item-cards" href="/items/<%=item._id%>">
+          <%= item.name %>
+        </a>
+      </li>
+      <% }); %>
+    </ul>
+  </body>
+</html>

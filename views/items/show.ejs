@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= item.name %></title> 
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <a class="list-items" href="/items/">Back to Grocery List</a>
+    <h1><%= item.name %></h1>
+    <div class="item-details">
+      <% if(item.isItemCold){ %>
+        <p>This item is cold!</p>
+      <% } else { %>
+        <p>This item is shelf stored.</p>
+      <% } %>
+    </div>
+    <div class="item-actions">
+      <form class="delete-form" action="/items/<%=item._id%>?_method=DELETE" method="POST">
+          <button class="delete-button" type="submit">Delete <%= item.name %></button>
+      </form>
+      <a class="edit-link" href="/items/<%= item._id %>/edit">
+          <div class="edit-text">Edit <%= item.name %></div>
+      </a>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create a Item</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <div class="new-header-div">
+      <h1>Add A New Item To Groceries List!</h1>
+      <a class="list-items" href="/items/">Back To Grocery List</a>
+    </div>
+    <form action="/items" method="POST">
+          <label for="name">Name:</label>
+          <input type="text" name="name" id="name" required/>
+          <div class="checkbox-div">
+            <label for="isItemCold">Is this item cold? </label>
+            <input type="checkbox" name="isItemCold" id="isItemCold" />
+        </div>
+        <button type="submit">Add Item To Grocery List</button>
+    </form>
+
+  </body>
+</html>
